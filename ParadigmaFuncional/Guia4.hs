@@ -30,3 +30,10 @@ frecuenciasHastaMomento :: Int -> [Double]
 frecuenciasHastaMomento instante
     | instante > 60 = error "Minuto no valido"
     | otherwise = take (instante `div` 10 + 1)  frecuenciaCardiaca
+
+-- EJERCICIO 3 --
+-- Definir la función esCapicua/1, si data una lista de listas, me devuelve si la concatenación de las sublistas es una lista capicua --
+
+esCapicua :: Eq a => [[a]] -> Bool
+esCapicua  = ( == ) <$> concat <*> (reverse . concat)
+
