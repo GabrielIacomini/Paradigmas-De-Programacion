@@ -75,3 +75,5 @@ diasLocos dia1 dia2 dia3 = dispersion dia1 dia2 dia3 > 100
 
 diasNormales :: Float -> Float -> Float -> Bool
 diasNormales dia1 dia2 dia3 = not (diasParejos dia1 dia2 dia3) && not (diasLocos dia1 dia2 dia3)
+
+-- EJERCICIO 11 --
