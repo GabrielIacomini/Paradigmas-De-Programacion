@@ -1,5 +1,5 @@
 # Paradigma Funcional
-### Lugar donde voy a subir todos los ejercicios resueltos de las guias de ejercicios del paradigma funcional y documentos utiles
+### Ejercicios resueltos de las guias de ejercicios del paradigma funcional y documentos utiles
 - Recomendacion: usar la VM para trabajar con Linux
 - Guia 1: https://acortar.link/gUl5Au
 - Guia 2: https://acortar.link/kBjOxr 
@@ -18,7 +18,7 @@
   - Importante --> Orden superior
 
 # Paradigma Logico
-### Lugar donde voy a subir todos los ejercicios resueltos de las guias de ejercicios del paradigma logico y documentos utiles
+### Ejercicios resueltos de las guias de ejercicios del paradigma logico y documentos utiles
 
 # Paradigma Objetos
-### Lugar donde voy a subir todos los ejercicios resueltos de las guias de ejercicios del paradigma objetos y documentos utiles
+### Ejercicios resueltos de las guias de ejercicios del paradigma objetos y documentos utiles
