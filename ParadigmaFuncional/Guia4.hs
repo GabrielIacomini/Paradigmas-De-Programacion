@@ -35,5 +35,5 @@ frecuenciasHastaMomento instante
 -- Definir la función esCapicua/1, si data una lista de listas, me devuelve si la concatenación de las sublistas es una lista capicua --
 
 esCapicua :: Eq a => [[a]] -> Bool
-esCapicua  =  ( == ) <$> concat . reverse <*>  concat
+esCapicua listaDeListas = concat listaDeListas == reverse (concat listaDeListas)  
 
