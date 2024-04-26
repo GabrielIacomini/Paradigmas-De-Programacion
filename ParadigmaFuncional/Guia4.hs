@@ -84,3 +84,38 @@ promedios listaDeListas = map promedioLista listaDeListas
 -- Armar una función promediosSinAplazos que dada una lista de listas me devuelve la lista de los promedios de cada lista-elemento, excluyendo los que sean menores a 4 que no se cuentan --
 
 --promediosSinAplazos :: [[]]--
+
+-- 4 --
+-- Definir la función mejoresNotas, que dada la información de un curso devuelve la lista con la mejor nota de cada alumno --
+
+mejoresNotas :: [[Int]] -> [Int]
+mejoresNotas  = map maximum
+
+-- 5 --
+-- Definir la función aprobó/1, que dada la lista de las notas de un alumno devuelve True si el alumno aprobó. Se dice que un alumno aprobó si todas sus notas son 6 o más --
+
+aprobo :: [Int] -> Bool
+aprobo = all (>= 6)
+
+aprobo' :: [Int] -> Bool
+aprobo' lista
+    | minimum lista >=6 = True
+    | otherwise = False
+
+-- 6 --
+-- Definir la función aprobaron/1, que dada la información de un curso devuelve la información de los alumnos que aprobaron --
+
+aprobaron :: [[Int]] -> [[Int]]
+aprobaron listasCurso = filter aprobo listasCurso 
+
+-- 7 --
+-- Definir la función divisores/1, que recibe un número y devuelve la lista de divisores --
+
+divisores :: Int -> [Int]
+divisores n = filter (esMultiploDe n) [1..n]
+
+-- 8 --
+-- Definir la función exists/2, que dadas una función booleana y una lista devuelve True si la función da True para algún elemento de la lista --
+
+exists :: (Int -> Bool) -> [Int] -> Bool
+exists = any 
