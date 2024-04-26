@@ -35,5 +35,19 @@ frecuenciasHastaMomento instante
 -- Definir la función esCapicua/1, si data una lista de listas, me devuelve si la concatenación de las sublistas es una lista capicua --
 
 esCapicua :: Eq a => [[a]] -> Bool
-esCapicua listaDeListas = concat listaDeListas == reverse (concat listaDeListas)  
+esCapicua listaDeListas = concat listaDeListas == reverse (concat listaDeListas)
+
+-- EJERCICIOS --
+-- 2 --
+-- Definir la función mejor/3, que recibe dos funciones y un número, y devuelve el resultado de la función que dé un valor más alto --
+
+-- Funciones auxiliares doble y cuadrado --
+cuadrado :: Int -> Int
+cuadrado num = num * num
+
+triple :: Int -> Int
+triple num = num * 3
+
+mejor :: (Num a, Ord b) => (a -> b) -> (a -> b) -> a -> b
+mejor funcion1 funcion2 numero = max (funcion1  numero) (funcion2 numero)
 
