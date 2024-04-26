@@ -51,3 +51,36 @@ triple num = num * 3
 mejor :: (Num a, Ord b) => (a -> b) -> (a -> b) -> a -> b
 mejor funcion1 funcion2 numero = max (funcion1  numero) (funcion2 numero)
 
+-- 3 --
+-- Definir la función aplicarPar/2, que recibe una función y un par, y devuelve el par que resulta de aplicar la función a los elementos del par --
+
+aplicarPar :: (a -> b) -> (a, a) -> (b, b)
+aplicarPar func (valor1, valor2) = (func valor1, func valor2)
+
+-- 4 --
+-- Definir la función parDeFns/3, que recibe dos funciones y un valor, y devuelve un par ordenado que es el resultado de aplicar las dos funciones al valor --
+
+parDeFns :: (a -> b) -> (a -> a) -> a -> (b, a)
+parDeFns func1 func2 valor = (func1 (func2 valor), func2 valor)
+
+-- ORDEN SUPERIOR + LISTAS --
+-- 1 --
+-- Definir la función esMultiploDeAlguno/2, que recibe un número y una lista y devuelve True si el número es múltiplo de alguno de los números de la lista --
+
+esMultiploDe :: Int -> Int -> Bool
+esMultiploDe numero1  = (== 0) . mod numero1
+
+esMultiploDeAlguno :: Int -> [Int] -> Bool
+esMultiploDeAlguno num  = any (esMultiploDe num) 
+
+-- 2 --
+-- Armar una función promedios/1, que dada una lista de listas me devuelve la lista de los promedios de cada lista-elemento --
+
+promedios :: [[Float]] -> [Float]
+promedios listaDeListas = map promedioLista listaDeListas
+    where promedioLista listaDeListas = sum listaDeListas / fromIntegral ( length listaDeListas )
+
+-- 3 --
+-- Armar una función promediosSinAplazos que dada una lista de listas me devuelve la lista de los promedios de cada lista-elemento, excluyendo los que sean menores a 4 que no se cuentan --
+
+--promediosSinAplazos :: [[]]--
