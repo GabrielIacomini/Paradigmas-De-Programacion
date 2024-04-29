@@ -119,3 +119,15 @@ divisores n = filter (esMultiploDe n) [1..n]
 
 exists :: (Int -> Bool) -> [Int] -> Bool
 exists = any 
+
+-- 9 --
+-- Definir la función hayAlgunNegativo/2, que dada una lista de números y un (…algo…) devuelve True si hay algún nro. negativo --
+
+hayAlgunNegativo :: [Int] -> Bool
+hayAlgunNegativo listaNums = any (<0) listaNums 
+
+-- 10 --
+-- Definir la función aplicarFunciones/2, que dadas una lista de funciones y un valor cualquiera, devuelve la lista del resultado de aplicar las funciones al valor --
+
+aplicarFunciones :: [a -> b] -> a -> [b]
+aplicarFunciones funciones num = map ( $ num ) funciones
