@@ -32,13 +32,13 @@ conduceBien sustancia criterio
     | esHalogeno sustancia criterio =  "conductor"
     | otherwise = "No es conductor"
     where 
-        esMetal (SustanciaSimple elemento) = grupoElemento elemento == "Metal"
+        esMetal (SustanciaSimple elemento) = grupoElemento elemento == Metal 
         esMetal _ = False
 
-        esGasNoble (SustanciaSimple elemento) Electricidad = grupoElemento elemento == "Gas Noble"
+        esGasNoble (SustanciaSimple elemento) Electricidad = grupoElemento elemento == GasNoble 
         esGasNoble _ _ = False
 
-        esHalogeno (SustanciaSimple elemento) Calor =  grupoElemento elemento == "Halogeno"
+        esHalogeno (SustanciaSimple elemento) Calor =  grupoElemento elemento == Halogeno
         esHalogeno _ _ = False
 
 
