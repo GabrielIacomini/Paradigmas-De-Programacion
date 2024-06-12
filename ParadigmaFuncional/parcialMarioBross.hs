@@ -145,3 +145,11 @@ jornadaTrabajoEmpleados unosPlomeros unasReparaciones = map (flip jornadaTrabajo
 masReparador :: [Plomero] -> [Reparacion] -> Plomero
 masReparador unosPlomeros unasReparaciones = 
 
+{-
+compararPlomeros :: Comparador -> [Plomero] -> Plomero
+compararPlomeros comparador [x] = x
+compararPlomeros comparador (x:y:xs) 
+    |comparador x > comparador y = compararPlomeros comparador (x:xs) 
+    |otherwise = compararPlomeros comparador (y:xs) 
+-}
+
