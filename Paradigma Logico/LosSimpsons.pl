@@ -25,7 +25,9 @@ madreDe(selma, ling).
 
 % Punto 1
 tieneHijo(Personaje):-
-    padreDe(Personaje, _);
+    padreDe(Personaje, _).
+
+tieneHijo(Personaje):-
     madreDe(Personaje, _).
 
 % Punto 2
