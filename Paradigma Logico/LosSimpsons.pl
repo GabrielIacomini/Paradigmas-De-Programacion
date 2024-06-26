@@ -31,18 +31,24 @@ tieneHijo(Personaje):-
     madreDe(Personaje, _).
 
 % Punto 2
-hermanos(Personaje1, Personaje2):-
-    padreDe(Padre, Personaje1),
-    padreDe(Padre, Personaje2),
-    madreDe(Madre, Personaje1),
-    madreDe(Madre, Personaje2),
-    Personaje1 \= Personaje2.
+hermanos(Hermano1, Hermano2):-
+    compartenPadre(Hermano1, Hermano2),
+    compartenMadre(Hermano1, Hermano2),
+    Hermano1 \= Hermano2.
+
+compartenMadre(Hermano1, Hermano2):-
+    madreDe(Madre, Hermano1),
+    madreDe(Madre, Hermano2).
+
+compartenPadre(Hermano1, Hermano2):-
+    padreDe(Padre, Hermano1),
+    padreDe(Padre, Hermano2).
 
 % Punto 3
-medioHermanos(Personaje1, Personaje2):-
-    padreDe(Padre, Personaje1),
-    padreDe(Padre, Personaje2);
-    madreDe(Madre, Personaje1),
-    madreDe(Madre, Personaje2),
-    Personaje1 \= Personaje2.
-    
+medioHermanos(Hermano1, Hermano2):-
+    compartenMadre(Hermano1, Hermano2),
+    not( compartenPadre(Hermano1, Hermano2)).
+
+medioHermanos(Hermano1, Hermano2):-
+    compartenPadre(Hermano1, Hermano2),
+    not( compartenMadre(Hermano1, Hermano2)).
